@@ -10,7 +10,7 @@ RUN apt-get -y install node-gyp libnode-dev libnss3 librust-gdk-pixbuf-sys-dev l
 # Install npm (requires dependencies) - Ubuntu 20.04
 #RUN apt-get -y install npm node-gyp libnode-dev libnss3 librust-gdk-pixbuf-sys-dev libgbm1
 RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
-RUN bash -c ". /root/.nvm/nvm.sh
+RUN bash -c ". /root/.nvm/nvm.sh"
 RUN nvm install 10
 RUN nvm use 10 
 RUN npm install -g terminalizer --unsafe-perm=true --allow-root"
