@@ -10,7 +10,7 @@ RUN apt-get -y install node-gyp libnode-dev libnss3 librust-gdk-pixbuf-sys-dev l
 # RUN apt-get install -y nodejs
 
 RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
-RUN . ~/.nvm/nvm.sh && source ~/.bashrc && nvm install node 10
+RUN . ~/.nvm/nvm.sh && . ~/.bashrc && nvm install node 10
 RUN nvm use 10 
 RUN npm install -g terminalizer --unsafe-perm=true --allow-root
 
