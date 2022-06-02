@@ -9,6 +9,11 @@ RUN apt-get update && apt-get install -y curl xvfb libgtk-3-0 libnss3 libasound2
 #    && nvm use 10 \
 #    && npm install -g terminalizer --unsafe-perm=true --allow-root"
 
+
+# RUN curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+# RUN apt-get install -y nodejs
+
+
 # Install npm (requires dependencies) - Ubuntu 20.04
 RUN apt-get -y install npm node-gyp libnode-dev libnss3 librust-gdk-pixbuf-sys-dev libgbm1
 
