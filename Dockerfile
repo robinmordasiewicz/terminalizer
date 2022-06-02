@@ -23,9 +23,10 @@ RUN npm install -g terminalizer --unsafe-perm=true
 RUN apt-get clean && rm -rf /var/cache/apt/* && rm -rf /var/lib/apt/lists/* && rm -rf /tmp/*
 
 # Grant global write access to render directory
-RUN chmod 777 /usr/local/lib/node_modules/terminalizer/render/
+#RUN chmod 777 /usr/local/lib/node_modules/terminalizer/render/
+RUN find /usr/local/lib/node_modules/terminalizer/ -type d -exec chmod 777 {} \;
 
-RUN chmod 4755 /usr/local/lib/node_modules/terminalizer/node_modules/electron/dist/chrome-sandbox
+#RUN chmod 777 /usr/local/lib/node_modules/terminalizer/node_modules/
 
 WORKDIR /home/ubuntu
 USER ubuntu:ubuntu
