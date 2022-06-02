@@ -4,7 +4,7 @@ USER root
 RUN touch ~/.bashrc && chmod +x ~/.bashrc
 
 RUN apt-get update && apt-get install -y curl xvfb libgtk-3-0 libnss3 libasound2 libxss1 libgconf-2-4 gifsicle
-RUN apt-get -y install node-gyp libnode-dev libnss3 librust-gdk-pixbuf-sys-dev libgbm1
+RUN apt-get -y install npm node-gyp libnode-dev libnss3 librust-gdk-pixbuf-sys-dev libgbm1
 
 # RUN curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
 # RUN apt-get install -y nodejs
