@@ -25,6 +25,8 @@ RUN apt-get clean && rm -rf /var/cache/apt/* && rm -rf /var/lib/apt/lists/* && r
 # Grant global write access to render directory
 RUN chmod 777 /usr/local/lib/node_modules/terminalizer/render/
 
+RUN chmod 4755 /usr/local/lib/node_modules/terminalizer/node_modules/electron/dist/chrome-sandbox
+
 WORKDIR /home/ubuntu
 USER ubuntu:ubuntu
 
