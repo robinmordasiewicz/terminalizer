@@ -13,7 +13,7 @@ RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | b
 RUN bash -c ". /root/.nvm/nvm.sh"
 RUN nvm install 10
 RUN nvm use 10 
-RUN npm install -g terminalizer --unsafe-perm=true --allow-root"
+RUN npm install -g terminalizer --unsafe-perm=true --allow-root
 
 # Install terminalizer globally with unsafe permissions
 #RUN npm install -g terminalizer --unsafe-perm=true
