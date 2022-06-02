@@ -1,5 +1,6 @@
 FROM robinhoodis/ubuntu:latest
 
+USER root
 RUN apt-get update && apt-get install -y \
     curl \
     # X virtual framebuffer
@@ -12,13 +13,12 @@ RUN apt-get update && apt-get install -y \
     gifsicle \
     && apt-get clean && rm -rf /var/cache/apt/* && rm -rf /var/lib/apt/lists/* && rm -rf /tmp/*
 
-RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash \
+RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash \
     && bash -c ". /root/.nvm/nvm.sh \
         && nvm install 10 \
         && nvm use 10 \
         && npm install -g terminalizer --unsafe-perm=true --allow-root"
 
 WORKDIR /home/ubuntu
-
-COPY render.sh .
+USER ubuntu:ubuntu
 
