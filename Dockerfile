@@ -22,7 +22,7 @@ RUN apt-get update && apt-get install -y \
 
 
 # Install npm (requires dependencies) - Ubuntu 20.04
-RUN apt install npm node-gyp libnode-dev libnss3 librust-gdk-pixbuf-sys-dev libgtk-3-0 libxss1 libasound2 libgbm1
+RUN apt-get -y install npm node-gyp libnode-dev libnss3 librust-gdk-pixbuf-sys-dev libgtk-3-0 libxss1 libasound2 libgbm1
 
 # Install terminalizer globally with unsafe permissions
 RUN npm install -g terminalizer --unsafe-perm=true
